@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
   <title>Piedra, papel, tijera</title>
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-  <fieldset>
-    <legend>Juego Piedra, Papel, Tijera</legend>
-  <button class="boton-jugada" data-jugada="piedra">✊ Piedra</button>
-  <button class="boton-jugada" data-jugada="papel">🤚 Papel</button>
-  <button class="boton-jugada" data-jugada="tijera">✌ Tijera</button>
-  <div id="resultados"></div>
-  <div class="contador">
-  <p id="contador-usuario">Tus puntos: 0</p>
-  <p id="contador-ordenador">Puntos de la máquina: 0</p>
+  <header class="header">
+    <h1>¡Piedra, Papel o Tijera</h1>
+    <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
+  </header>
+  <main class="game-container">
+    <div class="scoreboard">
+      <span id="player-score">0</span> - <span id="computer-score">0</span>
+    </div>
+    <div class="choice-grid">
+      <button class="choice" data-choice="rock">✊</button>
+      <button class="choice" data-choice="paper">🤚</button>
+      <button class="choice" data-choice="scissors">✌</button>
   </div>
-  </fieldset>
+  <p id="announcer" class="announcement"></p>
+  </main>
+
   <script src="./js/script.js"></script>
 </body>
 </html>
